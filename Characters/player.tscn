@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjqtnjwsmclsu"]
+
+[ext_resource type="Texture2D" uid="uid://cpqcpm875u4ox" path="res://Characters/character_squareRed.png" id="1_63638"]
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_p1ony"]
+[ext_resource type="AudioStream" uid="uid://dgg84ssw4w6u5" path="res://Audio/cartoon-jump-6462.mp3" id="3_l3b8b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hds4j"]
+size = Vector2(38, 59)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_p1ony")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_hds4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_63638")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_l3b8b")
+volume_db = -10.0
