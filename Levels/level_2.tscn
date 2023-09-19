@@ -12,6 +12,7 @@ size = Vector2(57, 215)
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_jssnf")
+LevelFile = "res://Levels/level_1.tscn"
 
 [node name="FallZone" type="Area2D" parent="."]
 collision_mask = 2

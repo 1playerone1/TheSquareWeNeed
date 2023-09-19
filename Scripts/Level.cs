@@ -4,17 +4,16 @@ namespace TheSquareWeNeed.Scripts;
 
 public partial class Level : Node
 {
+	// Set which level to travel inside editor
+	[ExportGroup("Select a level to travel")]
+	[Export(PropertyHint.File, "*.tscn,")]
+	private string LevelFile { get; set; }
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		FallZone();
 		NextLevel();
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
 	}
 	
 	// Checks if player falls from platform
@@ -32,7 +31,7 @@ public partial class Level : Node
 
 	private void NextLevelOnBodyEntered(Node2D body)
 	{
-		GetTree().ChangeSceneToFile("res://Levels/level_2.tscn");
+		GetTree().ChangeSceneToFile(LevelFile);
 		GD.Print("Entered Next Level");
 	}
 

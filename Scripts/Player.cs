@@ -53,6 +53,7 @@ public partial class Player : CharacterBody2D
         
         // Flips character when player or enemy goes left or right
         FlipSprite();
+        
     }
     
     // Player Sprite
