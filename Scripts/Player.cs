@@ -74,4 +74,5 @@ public partial class Player : CharacterBody2D
         Vector2 velocity = Velocity;
         _characterSprite.FlipH = !(velocity.X >= 0);
     }
+    
 }

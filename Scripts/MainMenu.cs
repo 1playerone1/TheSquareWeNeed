@@ -12,6 +12,7 @@ public partial class MainMenu : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		GetTree().Paused = false;
 		StartGame();
 		QuitGame();
 	}
@@ -25,7 +26,6 @@ public partial class MainMenu : Control
 	private void StartGameOnPressed()
 	{
 		GetTree().ChangeSceneToFile(LevelFile);
-		GD.Print("Entered Next Level");
 	}
 
 	private void QuitGame()
@@ -37,6 +37,5 @@ public partial class MainMenu : Control
 	private void QuitGameOnPressed()
 	{
 		GetTree().Quit();
-		GD.Print("Quit Game");
 	}
 }

@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjno5dt3ttywd"]
+
+[ext_resource type="Theme" uid="uid://rk5uxhov5gp7" path="res://Themes/TitleScreen_Theme.tres" id="1_i1f30"]
+[ext_resource type="Script" path="res://Scripts/PauseMenu.cs" id="2_xugu5"]
+
+[node name="Pause Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_i1f30")
+script = ExtResource("2_xugu5")
+LevelFile = "res://Title Screen/title_screen.tscn"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pause Overlay" type="ColorRect" parent="MarginContainer"]
+process_mode = 3
+visible = false
+layout_mode = 2
+color = Color(0.635294, 0.635294, 0.635294, 1)
+
+[node name="Title Screen" type="VBoxContainer" parent="MarginContainer/Pause Overlay"]
+layout_mode = 2
+offset_left = 522.0
+offset_top = 206.0
+offset_right = 757.0
+offset_bottom = 513.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="MarginContainer/Pause Overlay/Title Screen"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resume" type="Button" parent="MarginContainer/Pause Overlay/Title Screen"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 2
+button_mask = 3
+text = "Resume
+"
+
+[node name="Return Menu" type="Button" parent="MarginContainer/Pause Overlay/Title Screen"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 2
+button_mask = 3
+text = "Return Menu"

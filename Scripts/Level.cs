@@ -32,14 +32,12 @@ public partial class Level : Node
 	private void NextLevelOnBodyEntered(Node2D body)
 	{
 		GetTree().ChangeSceneToFile(LevelFile);
-		GD.Print("Entered Next Level");
 	}
 
 	// When Player falls from platform load current level
 	private void AreaOnBodyEntered(Node2D body)
 	{
 		GetTree().ReloadCurrentScene();
-		GD.Print("Player Fell");
 	}
 	
 }

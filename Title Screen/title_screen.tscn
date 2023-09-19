@@ -1,25 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://cd860v03nehev"]
+[gd_scene load_steps=5 format=3 uid="uid://cd860v03nehev"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_6kth6"]
 [ext_resource type="Texture2D" uid="uid://cpqcpm875u4ox" path="res://Characters/character_squareRed.png" id="1_b0drp"]
-[ext_resource type="FontFile" uid="uid://cvvgctxcbsq1e" path="res://Assets/NovaSquare-Regular.ttf" id="2_28kkw"]
-
-[sub_resource type="FontVariation" id="FontVariation_b2v1e"]
-base_font = ExtResource("2_28kkw")
-
-[sub_resource type="FontVariation" id="FontVariation_c2w2r"]
-base_font = ExtResource("2_28kkw")
-
-[sub_resource type="FontVariation" id="FontVariation_evyp3"]
-base_font = ExtResource("2_28kkw")
+[ext_resource type="Theme" uid="uid://rk5uxhov5gp7" path="res://Themes/TitleScreen_Theme.tres" id="1_kivy3"]
+[ext_resource type="Texture2D" uid="uid://dsmjjnfbdxwn4" path="res://Assets/itch-io_2.jpg" id="4_hfpqy"]
 
 [node name="Title Screen" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_kivy3")
 script = ExtResource("1_6kth6")
 LevelFile = "res://Levels/level_1.tscn"
 
@@ -42,8 +36,6 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("FontVariation_b2v1e")
-theme_override_font_sizes/font_size = 70
 text = "The Square We Need"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -57,8 +49,6 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = SubResource("FontVariation_c2w2r")
-theme_override_font_sizes/font_size = 40
 button_mask = 3
 text = "Start Game"
 
@@ -66,7 +56,25 @@ text = "Start Game"
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = SubResource("FontVariation_evyp3")
-theme_override_font_sizes/font_size = 40
 button_mask = 3
 text = "Quit Game"
+
+[node name="LinkButton" type="LinkButton" parent="MarginContainer/Title Screen"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_mask = 3
+uri = "https://baris-kacin.itch.io/"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Title Screen/LinkButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 7.0
+offset_right = 64.0
+offset_bottom = 79.0
+grow_horizontal = 2
+texture = ExtResource("4_hfpqy")
