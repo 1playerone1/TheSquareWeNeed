@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnhfbbigbkwmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjasp"]
+size = Vector2(101, 148)
+
+[node name="NextLevel" type="Area2D"]
+visibility_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1667, 370)
+shape = SubResource("RectangleShape2D_hjasp")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

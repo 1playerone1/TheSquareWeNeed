@@ -4,7 +4,7 @@ namespace TheSquareWeNeed.Scripts;
 
 public partial class Player : CharacterBody2D
 {
-    private const float Speed = 300.0f;
+    private const float Speed = 400.0f;
     private const float JumpVelocity = -600.0f;
 	
     private Sprite2D _characterSprite;

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8jkwfd1rh50p"]
+
+[ext_resource type="AudioStream" uid="uid://c4ya2x7s6xedd" path="res://Audio/funbgm032014(fun).wav" id="1_yc7d6"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_yc7d6")
+volume_db = -4.0
+autoplay = true
