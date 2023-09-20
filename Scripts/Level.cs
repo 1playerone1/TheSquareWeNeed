@@ -23,12 +23,14 @@ public partial class Level : Node
 		fallArea.BodyEntered += AreaOnBodyEntered;
 	}
 
+	// If player touches travel to chosen level 
 	private void NextLevel()
 	{
 		var nextLevel = GetNode<Area2D>("NextLevel");
 		nextLevel.BodyEntered += NextLevelOnBodyEntered;
 	}
 
+	// When player interacts with Area2D travel to chosen level
 	private void NextLevelOnBodyEntered(Node2D body)
 	{
 		GetTree().ChangeSceneToFile(LevelFile);

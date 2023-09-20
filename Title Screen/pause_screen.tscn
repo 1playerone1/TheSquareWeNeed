@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/PauseMenu.cs" id="2_xugu5"]
 
 [node name="Pause Screen" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,22 +24,17 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Pause Overlay" type="ColorRect" parent="MarginContainer"]
-process_mode = 3
 visible = false
 layout_mode = 2
-color = Color(0.635294, 0.635294, 0.635294, 1)
+color = Color(0.635294, 0.635294, 0.635294, 0.498039)
 
-[node name="Title Screen" type="VBoxContainer" parent="MarginContainer/Pause Overlay"]
+[node name="Title Screen" type="VBoxContainer" parent="MarginContainer"]
+visible = false
 layout_mode = 2
-offset_left = 522.0
-offset_top = 206.0
-offset_right = 757.0
-offset_bottom = 513.0
-size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 50
 
-[node name="Label" type="Label" parent="MarginContainer/Pause Overlay/Title Screen"]
+[node name="Label" type="Label" parent="MarginContainer/Title Screen"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
@@ -47,7 +43,7 @@ text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Resume" type="Button" parent="MarginContainer/Pause Overlay/Title Screen"]
+[node name="Resume" type="Button" parent="MarginContainer/Title Screen"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/outline_size = 2
@@ -55,7 +51,7 @@ button_mask = 3
 text = "Resume
 "
 
-[node name="Return Menu" type="Button" parent="MarginContainer/Pause Overlay/Title Screen"]
+[node name="Return Menu" type="Button" parent="MarginContainer/Title Screen"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/outline_size = 2
